@@ -1,5 +1,6 @@
 package com.coddingSuttle.razorpay.payment.entity;
 
+import com.coddingSuttle.razorpay.common.enums.PaymentActor;
 import com.coddingSuttle.razorpay.common.enums.PaymentEvent;
 import com.coddingSuttle.razorpay.common.enums.PaymentStatus;
 import jakarta.persistence.*;
@@ -32,8 +33,9 @@ public class PaymentTransitionLog {
     @Column(name = "to_status", length = 30, nullable = false)
     private PaymentStatus toStatus;
 
-    @Column(name = "actor", length = 100)
-    private String actor;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "actor", length = 30, nullable = false)
+    private PaymentActor actor;
 
     @Column(name = "occurred_at", nullable = false)
     private String occurredAt;
