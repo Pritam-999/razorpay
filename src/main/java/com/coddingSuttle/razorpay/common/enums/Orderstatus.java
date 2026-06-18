@@ -1,7 +1,7 @@
 package com.coddingSuttle.razorpay.common.enums;
 
 public enum Orderstatus {
-    CREATEED,
+    CREATED,
     ATTEMPTED,
     CANCELED,
     PAID,
